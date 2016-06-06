@@ -1,0 +1,3 @@
+<% @subjects.each do |subject| %>
+	<%= link_to( subject.name, {:action => 'show', :id => subject.id }) %> <br/>
+<% end %>

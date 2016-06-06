@@ -1,0 +1,36 @@
+<%= link_to("Home", "/posts/index") %>
+
+<h1>Posts#Hello</h1>
+<p>Hello !!!</p>
+
+<%= 1+1 %>
+<br/>
+
+<%= link_to("Hello page with param", {:action => 'index', :id => 3, :page => 5 }) %>
+<br/>
+
+<% target = 'world' %>
+
+<%= "Hello #{target}" %>
+
+<%= form_tag("/posts/hello_submit", method: "post") do %>
+  <%= label_tag(:fname, "First name:") %>
+  <%= text_field_tag(:fname) %>
+
+  <%= label_tag(:lname, "Last name:") %>
+  <%= text_field_tag(:lname) %>
+
+  <%= label_tag(:email, "Email:") %>
+  <%= text_area_tag(:email) %>
+
+  <%= label_tag(:password, "Password:") %>
+  <%= password_field_tag(:password) %>
+
+  <%= submit_tag("Register") %>
+<% end %>
+
+<% @arr.each do |n| %>
+	<%= n %> <br />
+<% end %>
+
+<%= params.inspect %>

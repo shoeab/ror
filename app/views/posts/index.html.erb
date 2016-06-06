@@ -1,0 +1,12 @@
+<h1>Home</h1>
+<p>Hello Index!!!</p>
+
+<%= link_to("Hello page", "/posts/hello") %>
+<br/>
+<%= link_to("Hello page with param", {:action => 'hello', :id => 3, :page => 5 }) %>
+
+<br/>
+
+<br/>
+ID: <%= @id %>
+NEXT PAGE: <%= @page +1 %>
